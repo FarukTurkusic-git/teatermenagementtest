@@ -1,0 +1,8 @@
+﻿{
+	"$schema": "https://xunit.net/schema/current/xunit.runner.schema.json",
+	"string-key": "value1",
+	"boolean-key": true,
+	"integer-key": 42,
+	"BaseUrl": "value1",
+	"ClientId": "value1"
+}
