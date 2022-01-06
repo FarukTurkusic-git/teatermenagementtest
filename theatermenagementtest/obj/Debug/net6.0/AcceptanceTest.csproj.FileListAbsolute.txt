@@ -128,3 +128,4 @@ C:\Users\TurkusicFaruk\source\repos\theatermenagementtest\theatermenagementtest\
 C:\Users\TurkusicFaruk\source\repos\theatermenagementtest\theatermenagementtest\obj\Debug\net6.0\ref\AcceptanceTest.dll
 C:\Users\TurkusicFaruk\source\repos\theatermenagementtest\theatermenagementtest\obj\Debug\net6.0\AcceptanceTest.pdb
 C:\Users\TurkusicFaruk\source\repos\theatermenagementtest\theatermenagementtest\obj\Debug\net6.0\AcceptanceTest.genruntimeconfig.cache
+C:\Users\TurkusicFaruk\source\repos\theatermenagementtest\theatermenagementtest\obj\Debug\net6.0\AcceptanceTest.csproj.AssemblyReference.cache
