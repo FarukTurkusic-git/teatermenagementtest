@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\TurkusicFaruk\\source\\repos\\theatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj": {}
+    "C:\\Users\\TurkusicFaruk\\source\\repos\\theatermenagementtest\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TurkusicFaruk\\source\\repos\\theatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj": {
+    "C:\\Users\\TurkusicFaruk\\source\\repos\\theatermenagementtest\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TurkusicFaruk\\source\\repos\\theatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj",
+        "projectUniqueName": "C:\\Users\\TurkusicFaruk\\source\\repos\\theatermenagementtest\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj",
         "projectName": "AcceptanceTest",
-        "projectPath": "C:\\Users\\TurkusicFaruk\\source\\repos\\theatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj",
+        "projectPath": "C:\\Users\\TurkusicFaruk\\source\\repos\\theatermenagementtest\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj",
         "packagesPath": "C:\\Users\\TurkusicFaruk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TurkusicFaruk\\source\\repos\\theatermenagementtest\\theatermenagementtest\\obj\\",
+        "outputPath": "C:\\Users\\TurkusicFaruk\\source\\repos\\theatermenagementtest\\teatermenagementtest\\theatermenagementtest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TurkusicFaruk\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,9 +56,17 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
+            "Microsoft.Graph.Core": {
+              "target": "Package",
+              "version": "[2.0.7, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.11.0, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.15.0, )"
             },
             "Selenium.WebDriver": {
               "target": "Package",
