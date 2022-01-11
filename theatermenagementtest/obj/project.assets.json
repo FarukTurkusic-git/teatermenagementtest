@@ -8164,11 +8164,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TurkusicFaruk\\source\\repos\\theatermenagementtest\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj",
+      "projectUniqueName": "C:\\Onbe\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj",
       "projectName": "AcceptanceTest",
-      "projectPath": "C:\\Users\\TurkusicFaruk\\source\\repos\\theatermenagementtest\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj",
+      "projectPath": "C:\\Onbe\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj",
       "packagesPath": "C:\\Users\\TurkusicFaruk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TurkusicFaruk\\source\\repos\\theatermenagementtest\\teatermenagementtest\\theatermenagementtest\\obj\\",
+      "outputPath": "C:\\Onbe\\teatermenagementtest\\theatermenagementtest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\TurkusicFaruk\\AppData\\Roaming\\NuGet\\NuGet.Config",
