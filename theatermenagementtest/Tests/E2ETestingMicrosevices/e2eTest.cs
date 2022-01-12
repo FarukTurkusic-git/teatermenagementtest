@@ -19,7 +19,8 @@ namespace AcceptanceTest.Tests.E2ETestingMicrosevices
     
     public class e2eTest
     {
-        Uri baseUrl = new Uri("http://localhost:59461/");
+        //Uri baseUrl = new Uri("http://localhost:59461/");
+        Uri baseUrl = new Uri("https://www.google.com/");
         [Trait("Category", "e2eAPI")]
         [Fact]
         public void e2eClientTest()
@@ -28,7 +29,7 @@ namespace AcceptanceTest.Tests.E2ETestingMicrosevices
 
             RestClient client = new RestClient(baseUrl);
 
-            RestRequest request = new RestRequest("fake-users", Method.GET);
+            RestRequest request = new RestRequest("search?q=faruk+turkusic", Method.GET);
 
 
             IRestResponse<Response> response = client.Execute<Response>(request);
