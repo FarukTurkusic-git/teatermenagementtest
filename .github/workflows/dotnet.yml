@@ -21,7 +21,9 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Test
+    - name: TestSanity
       #run: dotnet test --no-build --verbosity normal
       run: dotnet test --filter Category=Sanity
+    - name: TestSmoke
+      run: dotnet test --filter Category=e2eAPI
       
