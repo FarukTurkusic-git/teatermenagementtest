@@ -33,7 +33,7 @@ jobs:
         echo "Full Path: " $ACCEPTANCE_TEST_PATH
         ACCEPTANCE_TEST_FOLDER=$(basename $ACCEPTANCE_TEST_PATH)
         echo "Folder Name: " $ACCEPTANCE_TEST_FOLDER
-        ACCEPTANCE_TEST_DLL=$(find $ACCEPTANCE_TEST_PATH -type f -iname "${ACCEPTANCE_TEST_FOLDER}.dll" -ipath "*/bin/*" -not -ipath "*/ref/*")
+        ACCEPTANCE_TEST_DLL=$(find ./theatermenagementtest -type f -iname AcceptanceTest.dll -ipath "*/bin/*" -not -ipath "*/ref/*")
         echo "Test Assembly: " $ACCEPTANCE_TEST_DLL
         ACCEPTANCE_TEST_JSON=$(find $ACCEPTANCE_TEST_PATH -type f -iname "TestExecution.json" -ipath "*/bin/*" -not -ipath "*/ref/*")
         echo "Execution Json: " $ACCEPTANCE_TEST_JSON
