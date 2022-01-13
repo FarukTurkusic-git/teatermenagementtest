@@ -29,7 +29,7 @@ jobs:
     - name: Generate SpecFlow LivingDoc
       run: | # Will be useful to have consistent naming conventions for these directory parsings
         echo "Generating Acceptance Tests LivingDoc"
-        ACCEPTANCE_TEST_PATH=$(find . -type d -iname "*.AcceptanceTest.csproj")
+        ACCEPTANCE_TEST_PATH=$(find . -type d -iname "theatermenagementtest")
         echo "Full Path: " $ACCEPTANCE_TEST_PATH
         ACCEPTANCE_TEST_FOLDER=$(basename $ACCEPTANCE_TEST_PATH)
         echo "Folder Name: " $ACCEPTANCE_TEST_FOLDER
