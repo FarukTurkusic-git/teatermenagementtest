@@ -26,4 +26,23 @@ jobs:
       run: dotnet test --filter Category=Sanity
     - name: TestSmoke
       run: dotnet test --filter Category=e2eAPI
+    - name: Generate SpecFlow LivingDoc
+      run: | # Will be useful to have consistent naming conventions for these directory parsings
+        echo "Generating Acceptance Tests LivingDoc"
+        ACCEPTANCE_TEST_PATH=$(find . -type d -iname "theatermenagementtest")
+        echo "Full Path: " $ACCEPTANCE_TEST_PATH
+        ACCEPTANCE_TEST_FOLDER=$(basename $ACCEPTANCE_TEST_PATH)
+        echo "Folder Name: " $ACCEPTANCE_TEST_FOLDER
+        ACCEPTANCE_TEST_DLL=$(find ./theatermenagementtest -type f -iname AcceptanceTest.dll -ipath "*/bin/*" -not -ipath "*/ref/*")
+        echo "Test Assembly: " $ACCEPTANCE_TEST_DLL
+        ACCEPTANCE_TEST_JSON=$(find $ACCEPTANCE_TEST_PATH -type f -iname "TestExecution.json" -ipath "*/bin/*" -not -ipath "*/ref/*")
+        echo "Execution Json: " $ACCEPTANCE_TEST_JSON
+        dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
+        livingdoc test-assembly $ACCEPTANCE_TEST_DLL -t $ACCEPTANCE_TEST_JSON
+      shell: bash
+    - name: 'Publish Specflow LivingDoc'
+      uses: actions/upload-artifact@v2
+      with:
+        name: 'Specflow LivingDoc'
+        path: LivingDoc.html
       
