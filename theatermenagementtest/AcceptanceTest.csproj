@@ -38,6 +38,7 @@
 		<Folder Include="Tests\AcceptanceTests\Features\" />
 		<Folder Include="Models\" />
 		<Folder Include="Resources\RunSettings\" />
+		<Folder Include="Tests\E2ETestingMicrosevices\POSTMAN\" />
 		<Folder Include="Tests\SmokeTests\" />
 	</ItemGroup>
 	<ItemGroup>

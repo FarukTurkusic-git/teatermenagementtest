@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Onbe\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj": {}
+    "C:\\tfs\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj": {}
   },
   "projects": {
-    "C:\\Onbe\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj": {
+    "C:\\tfs\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Onbe\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj",
+        "projectUniqueName": "C:\\tfs\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj",
         "projectName": "AcceptanceTest",
-        "projectPath": "C:\\Onbe\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj",
+        "projectPath": "C:\\tfs\\teatermenagementtest\\theatermenagementtest\\AcceptanceTest.csproj",
         "packagesPath": "C:\\Users\\TurkusicFaruk\\.nuget\\packages\\",
-        "outputPath": "C:\\Onbe\\teatermenagementtest\\theatermenagementtest\\obj\\",
+        "outputPath": "C:\\tfs\\teatermenagementtest\\theatermenagementtest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\TurkusicFaruk\\AppData\\Roaming\\NuGet\\NuGet.Config",
