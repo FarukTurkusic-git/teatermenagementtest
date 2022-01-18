@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "dfb383cd-4ef5-48dc-85ff-553d85e761e1",
+		"name": "theatermanagementcollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetFakeUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:59461/fake-users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59461",
+					"path": [
+						"fake-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMovies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:59461/api/Movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59461",
+					"path": [
+						"api",
+						"Movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMoviesByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:59461/api/Movies/3d98d137-2cae-449a-a96a-378ac152698d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "59461",
+					"path": [
+						"api",
+						"Movies",
+						"3d98d137-2cae-449a-a96a-378ac152698d"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const response = pm.response.json();",
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"",
+					"pm.test(\"GetFakeUsers\", function (){",
+					"    pm.expect(response.statusCode).to.equal(200);",
+					"});",
+					"",
+					"pm.test(\"Request was successful\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	]
+}
