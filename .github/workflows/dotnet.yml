@@ -19,6 +19,8 @@ jobs:
         dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore
+    - name: Install newman
+      run: npm install -g newman
     - name: Build
       run: dotnet build --no-restore
     - name: TestSanity
@@ -50,5 +52,7 @@ jobs:
         echo "Generating Postman Tests "
         POSTMAN_PATH=$(find . -type d -iname "POSTMAN")
         echo "Full Path: " $POSTMAN_PATH
+        cd $POSTMAN_PATH
+        newman run theatermanagementcollection.postman_collection_with_QAenv.json
       shell: bash
       
