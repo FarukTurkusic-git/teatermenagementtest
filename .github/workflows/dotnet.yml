@@ -46,10 +46,9 @@ jobs:
         name: 'Specflow LivingDoc'
         path: LivingDoc.html
     - name: Newman Action
-      uses: matt-ball/newman-action@v1.0.4
-      with:
-        workingDir: find . -type d -iname "POSTMAN"
-        collection: theatermanagementcollection.postman_collection_with_QAenv.json
-        environment: qa.postman_environment.json
-        
+      run: | # Will be useful to have consistent naming conventions for these directory parsings
+        echo "Generating Postman Tests "
+        POSTMAN_PATH=$(find . -type d -iname "POSTMAN")
+        echo "Full Path: " $POSTMAN_PATH
+      shell: bash
       
