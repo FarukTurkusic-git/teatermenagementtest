@@ -49,7 +49,7 @@ jobs:
       uses: matt-ball/newman-action@v1.0.4
       with:
         workingDir: './theatermenagementtest/Tests/E2ETestingMicrosevices/POSTMAN'
-        collection: 'theatermanagementcollection.postman_collection_with_QAenv.json'
-        environment: 'qa.postman_environment.json'
+        collection: theatermanagementcollection.postman_collection_with_QAenv.json
+        environment: qa.postman_environment.json
         
       
