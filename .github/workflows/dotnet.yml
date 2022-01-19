@@ -47,12 +47,12 @@ jobs:
       with:
         name: 'Specflow LivingDoc'
         path: LivingDoc.html
-    - name: Newman Action
-      run: | # Will be useful to have consistent naming conventions for these directory parsings
-        echo "Generating Postman Tests "
-        POSTMAN_PATH=$(find . -type d -iname "POSTMAN")
-        echo "Full Path: " $POSTMAN_PATH
-        cd $POSTMAN_PATH
-        newman run theatermanagementcollection.postman_collection.json
-      shell: bash
+    # - name: Newman Action
+    # run: | # Will be useful to have consistent naming conventions for these directory parsings
+    #    echo "Generating Postman Tests "
+    #    POSTMAN_PATH=$(find . -type d -iname "POSTMAN")
+    #    echo "Full Path: " $POSTMAN_PATH
+    #    cd $POSTMAN_PATH
+    #    newman run theatermanagementcollection.postman_collection.json
+    #  shell: bash
       
