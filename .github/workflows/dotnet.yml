@@ -58,11 +58,11 @@ jobs:
     - name: run child flow
       uses: convictional/trigger-workflow-and-wait@v1.3.0
       with:
-        owner: keithconvictional
-        repo: myrepo
-        github_token: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
-        github_user: github-user
-        workflow_file_name: main.yml
+        owner: FarukTurkusic-git
+        repo: TestPipeline
+        github_token: "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"
+        github_user: FarukTurkusic-git
+        workflow_file_name: blank.yml
         ref: release-branch
         wait_interval: 10
         inputs: '{}'
