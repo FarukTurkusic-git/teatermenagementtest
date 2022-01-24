@@ -55,4 +55,17 @@ jobs:
     #    cd $POSTMAN_PATH
     #    newman run theatermanagementcollection.postman_collection.json
     #  shell: bash
-      
+    - name: run child flow
+      uses: convictional/trigger-workflow-and-wait@v1.3.0
+      with:
+        owner: keithconvictional
+        repo: myrepo
+        github_token: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
+        github_user: github-user
+        workflow_file_name: main.yml
+        ref: release-branch
+        wait_interval: 10
+        inputs: '{}'
+        propagate_failure: false
+        trigger_workflow: true
+        wait_workflow: true
