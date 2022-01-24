@@ -59,8 +59,8 @@ jobs:
       uses: convictional/trigger-workflow-and-wait@v1.3.0
       with:
         owner: FarukTurkusic-git
-        repo: TestPipeline
-        github_token: "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"
+        repo: TestPipeline 
+        github_token: ${{ secrets.ACCESS_TOKEN }}
         workflow_file_name: blank.yml
 
 
