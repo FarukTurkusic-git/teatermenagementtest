@@ -56,7 +56,7 @@ jobs:
     #    newman run theatermanagementcollection.postman_collection.json
     #  shell: bash
     - name: run child flow
-      uses: convictional/trigger-workflow-and-wait@v1.3.0
+      uses: FarukTurkusic-git/TestPipeline@latest
       with:
         owner: FarukTurkusic-git
         repo: TestPipeline
