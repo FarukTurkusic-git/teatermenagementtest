@@ -56,7 +56,7 @@ jobs:
     #    newman run theatermanagementcollection.postman_collection.json
     #  shell: bash
     - name: run child flow
-      uses: FarukTurkusic-git/TestPipeline@latest
+      uses: FarukTurkusic-git/TestPipeline@v1.0.0
       with:
         owner: FarukTurkusic-git
         repo: TestPipeline
