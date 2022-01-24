@@ -61,11 +61,5 @@ jobs:
         owner: FarukTurkusic-git
         repo: TestPipeline
         github_token: "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"
-        github_user: FarukTurkusic-git
-        workflow_file_name: blank.yml
-        ref: release-branch
-        wait_interval: 10
-        inputs: '{}'
-        propagate_failure: false
-        trigger_workflow: true
-        wait_workflow: true
+
+
