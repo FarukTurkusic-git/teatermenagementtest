@@ -61,5 +61,6 @@ jobs:
         owner: FarukTurkusic-git
         repo: TestPipeline
         github_token: "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"
+        workflow_file_name: blank.yml
 
 
