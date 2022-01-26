@@ -10,7 +10,7 @@ namespace AcceptanceTest.Pages
 {
     internal class HomePage : DriverHelper
     {
-        //ChromeDriver Driver = new ChromeDriver();
+        ChromeDriver Driver = new ChromeDriver();
         IWebElement lnkLogin => Driver.FindElement(By.CssSelector("a[class='nav-link text-light bg-primary']"));
         IWebElement lnkLogOut => Driver.FindElement(By.CssSelector("a[title='Logout']"));
 
@@ -25,12 +25,31 @@ namespace AcceptanceTest.Pages
             Driver.Manage().Window.Maximize();
         }
 
+        public void OpenHomePage(string _homePageUrl)
+        {
+            Driver.Navigate().GoToUrl(_homePageUrl);
+            Driver.Manage().Window.Maximize();
+        }
+
 
         public void OpenHomePageInBrowser(string browser)
         {
             if (browser == "chrome")
             {
                 Driver.Navigate().GoToUrl("http://localhost:8080/");
+                Driver.Manage().Window.Maximize();
+            }
+            else if (browser == "firefox") { }
+            else
+            {
+            }
+        }
+
+        public void OpenHomePageInBrowser(string browser, string _homePageUrl)
+        {
+            if (browser == "chrome")
+            {
+                Driver.Navigate().GoToUrl(_homePageUrl);
                 Driver.Manage().Window.Maximize();
             }
             else if (browser == "firefox") { }

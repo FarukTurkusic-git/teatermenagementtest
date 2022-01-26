@@ -5,12 +5,38 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 using System.Diagnostics;
+using AcceptanceTest.Resources.Interface;
+using FluentAssertions;
 
 namespace AcceptanceTest.Tests.UnitTests.SanityTests
 {
     public class SanityUnitTest
     {
-      
+        [Trait("Category", " SanityTests")]
+        [Fact]
+        public void sanityBasicCheckIfStorageIsCreatedAndEmpty()
+        {
+            FakeUserRepository fur = new FakeUserRepository();
+
+            int usersNumber = fur.GetAllUsers().Count;
+         
+            usersNumber.Should().BeLessThan(1, "because we didn't put any items in the list");
+        }
+
+        [Trait("Category", " SanityTests")]
+        [Fact]
+        public void sanityCheckIfUserIsAdding()
+        {
+            FakeUserRepository fur = new FakeUserRepository();
+
+            fur.Insert(1);
+            int usersNumber = fur.GetAllUsers().Count;
+
+            usersNumber.Should().BeInRange(0,1, "because we didn't put any items in the list");
+        }
+
+
+        #region TestPriority
         [Fact, TestPriority(2)]
         public void Test1()
         {
@@ -23,7 +49,7 @@ namespace AcceptanceTest.Tests.UnitTests.SanityTests
             Debug.WriteLine("second test1");
         }
 
-        [Trait("Category", "Sanity")]
+        [Trait("Category", "SanityTests")]
         [Fact]
         public void Test3()
         {
@@ -47,5 +73,6 @@ namespace AcceptanceTest.Tests.UnitTests.SanityTests
             Console.WriteLine("first test2");
             Debug.WriteLine("first test2");
         }
+        #endregion
     }
 }

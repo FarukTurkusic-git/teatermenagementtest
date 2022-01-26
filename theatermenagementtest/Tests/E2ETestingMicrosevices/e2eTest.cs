@@ -38,6 +38,7 @@ namespace AcceptanceTest.Tests.E2ETestingMicrosevices
             //Assert.Equal("Works!", response.Data.Message);
 
         }
+
         [Trait("Category", "e2eAPI")]
         [Fact]
         public void Handles_GET_Request_404_Error()
