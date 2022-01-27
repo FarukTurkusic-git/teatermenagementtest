@@ -11,6 +11,7 @@ namespace testProject.Tests.e2e.e2eFRONT
 {
     public class E2EFrontTest
     {
+        [Trait("Category", " E2EFrontTests")]
         [Fact]
         public void FrontTest()
         {
