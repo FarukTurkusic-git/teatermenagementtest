@@ -28,6 +28,8 @@ jobs:
       run: dotnet test --filter Category=Sanity
     - name: TestSmoke
       run: dotnet test --filter Category=e2eAPI
+    - name: Test E2E Front
+      run: dotnet test --filter Category=E2EFrontTests
    # - name: run child flow
    #   uses: convictional/trigger-workflow-and-wait@v1.3.0
    #   with:
