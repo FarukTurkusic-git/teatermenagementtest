@@ -25,9 +25,9 @@ jobs:
       run: dotnet build --no-restore
     - name: TestSanity
       #run: dotnet test --no-build --verbosity normal
-      run: dotnet test --filter Category=Sanity
+      run: dotnet test --filter Category=SanityTests
     - name: TestSmoke
-      run: dotnet test --filter Category=e2eAPI
+      run: dotnet test --filter Category=UITests
     - name: Test E2E Front
       run: dotnet test --filter Category=E2EFrontTests
    # - name: run child flow
