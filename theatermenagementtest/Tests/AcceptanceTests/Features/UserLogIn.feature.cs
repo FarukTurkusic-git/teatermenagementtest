@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace AcceptanceTest.Tests.AcceptanceTests.Features
+namespace testProject.Tests.AcceptanceTests.Features
 {
     using TechTalk.SpecFlow;
     using System;
@@ -31,7 +31,7 @@ namespace AcceptanceTest.Tests.AcceptanceTests.Features
 #line 1 "UserLogIn.feature"
 #line hidden
         
-        public UserLogInFeature(UserLogInFeature.FixtureData fixtureData, AcceptanceTest_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public UserLogInFeature(UserLogInFeature.FixtureData fixtureData, testProject_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();

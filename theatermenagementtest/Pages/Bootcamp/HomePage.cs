@@ -14,6 +14,11 @@ namespace AcceptanceTest.Pages
         IWebElement lnkLogin => Driver.FindElement(By.CssSelector("a[class='nav-link text-light bg-primary']"));
         IWebElement lnkLogOut => Driver.FindElement(By.CssSelector("a[title='Logout']"));
 
+        IWebElement lnkLoginByCssSelector => Driver.FindElement(By.CssSelector("a[class='gb_1 gb_2 gb_2d gb_2c']"));
+
+
+        public void ClickLoginBySelector() => lnkLoginByCssSelector.Click();
+
         public void ClickLogin() => lnkLogin.Click();
         //public void ClickLogOut() => lnkLogOut.Click();
 

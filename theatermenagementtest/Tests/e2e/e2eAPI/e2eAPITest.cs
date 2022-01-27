@@ -17,7 +17,7 @@ namespace AcceptanceTest.Tests.E2ETestingMicrosevices
     //https://csharp.hotexamples.com/examples/-/RestClient/Execute/php-restclient-execute-method-examples.html
     //https://csharp.hotexamples.com/examples/-/YouScribeClient/-/php-youscribeclient-class-examples.html
     
-    public class e2eTest
+    public class e2eAPITest
     {
         //Uri baseUrl = new Uri("http://localhost:59461/");
         Uri baseUrl = new Uri("https://www.google.com/");
