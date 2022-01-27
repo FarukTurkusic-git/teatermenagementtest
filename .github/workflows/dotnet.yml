@@ -43,12 +43,12 @@ jobs:
         echo "Full Path: " $ACCEPTANCE_TEST_PATH
         ACCEPTANCE_TEST_FOLDER=$(basename $ACCEPTANCE_TEST_PATH)
         echo "Folder Name: " $ACCEPTANCE_TEST_FOLDER
-        ACCEPTANCE_TEST_DLL=$(find $ACCEPTANCE_TEST_PATH -type f -iname "${ACCEPTANCE_TEST_FOLDER}.dll" -ipath "*/bin/*" -not -ipath "*/ref/*")
+        ACCEPTANCE_TEST_DLL=$(find $ACCEPTANCE_TEST_PATH -type f -iname testProject.dll -ipath "*/bin/*" -not -ipath "*/ref/*")
         echo "Test Assembly: " $ACCEPTANCE_TEST_DLL
         ACCEPTANCE_TEST_JSON=$(find $ACCEPTANCE_TEST_PATH -type f -iname "TestExecution.json" -ipath "*/bin/*" -not -ipath "*/ref/*")
         echo "Execution Json: " $ACCEPTANCE_TEST_JSON
         dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
-        livingdoc test-assembly ./theatermenagementtest/bin/Debug/net6.0/AcceptanceTest.dll -t $ACCEPTANCE_TEST_JSON
+        livingdoc test-assembly $ACCEPTANCE_TEST_DLL -t $ACCEPTANCE_TEST_JSON
       shell: bash
     - name: 'Publish Specflow LivingDoc'
       uses: actions/upload-artifact@v2
