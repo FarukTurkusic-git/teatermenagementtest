@@ -28,6 +28,14 @@ jobs:
       run: dotnet test --filter Category=Sanity
     - name: TestSmoke
       run: dotnet test --filter Category=e2eAPI
+    - name: run child flow
+      uses: convictional/trigger-workflow-and-wait@v1.3.0
+      with:
+        owner: FarukTurkusic-git
+        repo: TestPipeline 
+        github_token: ${{ secrets.NEW_ACCESS_TOKEN }}
+        workflow_file_name: blank.yml
+        wait_interval: 30
     - name: Generate SpecFlow LivingDoc
       run: | # Will be useful to have consistent naming conventions for these directory parsings
         echo "Generating Acceptance Tests LivingDoc"
@@ -47,12 +55,14 @@ jobs:
       with:
         name: 'Specflow LivingDoc'
         path: LivingDoc.html
-    - name: Newman Action
-      run: | # Will be useful to have consistent naming conventions for these directory parsings
-        echo "Generating Postman Tests "
-        POSTMAN_PATH=$(find . -type d -iname "POSTMAN")
-        echo "Full Path: " $POSTMAN_PATH
-        cd $POSTMAN_PATH
-        newman run theatermanagementcollection.postman_collection_with_QAenv.json
-      shell: bash
-      
+    # - name: Newman Action
+    # run: | # Will be useful to have consistent naming conventions for these directory parsings
+    #    echo "Generating Postman Tests "
+    #    POSTMAN_PATH=$(find . -type d -iname "POSTMAN")
+    #    echo "Full Path: " $POSTMAN_PATH
+    #    cd $POSTMAN_PATH
+    #    newman run theatermanagementcollection.postman_collection.json
+    #  shell: bash
+    
+
+
