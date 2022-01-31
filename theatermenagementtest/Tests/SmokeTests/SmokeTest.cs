@@ -23,10 +23,11 @@ namespace AcceptanceTest.Tests.SmokeTests
             //options.AddArguments("--disable-popup-blocking");
             //options.AddArguments("--disable-default-apps");
             //options.AddArguments("test-type=browser");
-            options.AddArguments("--disable - dev - shm - usage");
+            //in usage
+            options.AddArguments("--headless");
+            options.AddArguments("--no-sandbox");
+            options.AddArguments("--disable-dev-shm-usage");
             options.AddArguments("--remote-debugging-port=9222");
-            
-
 
 
             ChromeDriver Driver = new ChromeDriver(options);
@@ -37,7 +38,7 @@ namespace AcceptanceTest.Tests.SmokeTests
             HomePage homePage = new HomePage(Driver);
 
             homePage.OpenHomePageInBrowser("chrome", "https://devblogs.microsoft.com/devops/integrating-smoke-tests-into-your-continuous-delivery-pipeline/");
-            
+
         }
 
 
