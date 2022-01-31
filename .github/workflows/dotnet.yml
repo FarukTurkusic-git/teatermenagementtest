@@ -25,17 +25,19 @@ jobs:
       run: dotnet build --no-restore
     - name: TestSanity
       #run: dotnet test --no-build --verbosity normal
-      run: dotnet test --filter Category=Sanity
+      run: dotnet test --filter Category=SanityTests
     - name: TestSmoke
-      run: dotnet test --filter Category=e2eAPI
-    - name: run child flow
-      uses: convictional/trigger-workflow-and-wait@v1.3.0
-      with:
-        owner: FarukTurkusic-git
-        repo: TestPipeline 
-        github_token: ${{ secrets.NEW_ACCESS_TOKEN }}
-        workflow_file_name: blank.yml
-        wait_interval: 30
+      run: dotnet test --filter Category=UITests
+    - name: Test E2E Front
+      run: dotnet test --filter Category=E2EFrontTests
+   # - name: run child flow
+   #   uses: convictional/trigger-workflow-and-wait@v1.3.0
+   #   with:
+   #     owner: FarukTurkusic-git
+   #     repo: TestPipeline 
+   #     github_token: ${{ secrets.NEW_ACCESS_TOKEN }}
+   #     workflow_file_name: blank.yml
+   #     wait_interval: 30
     - name: Generate SpecFlow LivingDoc
       run: | # Will be useful to have consistent naming conventions for these directory parsings
         echo "Generating Acceptance Tests LivingDoc"
@@ -43,7 +45,7 @@ jobs:
         echo "Full Path: " $ACCEPTANCE_TEST_PATH
         ACCEPTANCE_TEST_FOLDER=$(basename $ACCEPTANCE_TEST_PATH)
         echo "Folder Name: " $ACCEPTANCE_TEST_FOLDER
-        ACCEPTANCE_TEST_DLL=$(find ./theatermenagementtest -type f -iname AcceptanceTest.dll -ipath "*/bin/*" -not -ipath "*/ref/*")
+        ACCEPTANCE_TEST_DLL=$(find $ACCEPTANCE_TEST_PATH -type f -iname testProject.dll -ipath "*/bin/*" -not -ipath "*/ref/*")
         echo "Test Assembly: " $ACCEPTANCE_TEST_DLL
         ACCEPTANCE_TEST_JSON=$(find $ACCEPTANCE_TEST_PATH -type f -iname "TestExecution.json" -ipath "*/bin/*" -not -ipath "*/ref/*")
         echo "Execution Json: " $ACCEPTANCE_TEST_JSON
