@@ -15,9 +15,23 @@ namespace AcceptanceTest.Tests.SmokeTests
         [Fact]
         public void BrowseToUrlPageTest()
         {
-            //ChromeDriver Driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("test-type");
+            options.AddArguments("start-maximized");
+            options.AddArguments("--window-size=1920,1080");
+            options.AddArguments("--enable-precise-memory-info");
+            options.AddArguments("--disable-popup-blocking");
+            options.AddArguments("--disable-default-apps");
+            options.AddArguments("test-type=browser");
+            options.AddArguments("--disable - dev - shm - usage");
+            
 
-            HomePage homePage = new HomePage();
+            ChromeDriver Driver = new ChromeDriver(options);
+
+
+
+
+            HomePage homePage = new HomePage(Driver);
 
             homePage.OpenHomePageInBrowser("chrome", "https://devblogs.microsoft.com/devops/integrating-smoke-tests-into-your-continuous-delivery-pipeline/");
             

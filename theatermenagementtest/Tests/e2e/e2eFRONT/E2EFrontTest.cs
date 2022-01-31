@@ -1,5 +1,6 @@
 ﻿using AcceptanceTest;
 using AcceptanceTest.Pages;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +16,9 @@ namespace testProject.Tests.e2e.e2eFRONT
         [Fact]
         public void FrontTest()
         {
+            ChromeDriver chromedriver = new ChromeDriver(); 
 
-            HomePage homepage = new HomePage();
+            HomePage homepage = new HomePage(chromedriver);
             string url = "https://www.google.com";
 
             homepage.OpenHomePageInBrowser("chrome", url);

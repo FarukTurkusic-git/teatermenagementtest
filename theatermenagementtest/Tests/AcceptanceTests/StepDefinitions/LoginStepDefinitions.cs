@@ -13,10 +13,10 @@ namespace AcceptanceTest.StepDefinitions
     [Binding]
     public class LoginStepDefinitions
     {
-        ChromeDriver Driver = new ChromeDriver();
+        static ChromeDriver Driver = new ChromeDriver();
         
        
-        HomePage homePage = new HomePage();
+        HomePage homePage = new HomePage(Driver);
         LoginPage loginPage = new LoginPage();
 
         [Given(@"I navigate to application")]

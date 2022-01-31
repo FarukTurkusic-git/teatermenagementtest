@@ -10,11 +10,16 @@ namespace AcceptanceTest.Pages
 {
     internal class HomePage : DriverHelper
     {
-        ChromeDriver Driver = new ChromeDriver();
+        IWebDriver Driver ;
+
         IWebElement lnkLogin => Driver.FindElement(By.CssSelector("a[class='nav-link text-light bg-primary']"));
         IWebElement lnkLogOut => Driver.FindElement(By.CssSelector("a[title='Logout']"));
 
         IWebElement lnkLoginByCssSelector => Driver.FindElement(By.CssSelector("a[class='gb_1 gb_2 gb_2d gb_2c']"));
+
+        public HomePage(IWebDriver wd) {
+            Driver = wd;
+        }
 
 
         public void ClickLoginBySelector() => lnkLoginByCssSelector.Click();
@@ -61,6 +66,11 @@ namespace AcceptanceTest.Pages
             else
             {
             }
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
     }
 }
